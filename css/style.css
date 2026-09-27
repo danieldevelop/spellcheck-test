@@ -1,0 +1,12 @@
+.textarea-edit {
+    width: 800px;
+    height: 250px;
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+.error-word {
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+}
