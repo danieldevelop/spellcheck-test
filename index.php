@@ -1,1 +1,23 @@
-<?php
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prueba LanguageTool</title>
+</head>
+<body>
+
+<h2>Prueba Corrector Ortográfico</h2>
+
+<textarea name="texto" id="texto" cols="100" rows="10"></textarea>
+<br><br>
+<button id="btnValidar" type="button">Validar</button>
+
+<hr>
+
+<div id="resultado"></div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
