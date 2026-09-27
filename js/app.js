@@ -2,16 +2,22 @@
 
 $("#btnValidar").on("click", () => {
 
-    const texto = $("texto").val();
+    const texto = $("#texto").val();
 
     $.ajax({
         url: "check.php",
         type: "POST",
+        dataType: "json",
         data: {
             texto,
         },
         success: (response) => {
             let html = "";
+
+            if (!response.matches) {
+                $("#resultado").html("Error al procesar la respuesta");
+                return;
+            }
 
             if (response.matches.length === 0) {
                 html += `<p>Sin errores</p>`;
