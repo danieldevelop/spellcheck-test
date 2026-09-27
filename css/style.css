@@ -1,38 +1,39 @@
+/* Editor (hereda borde y foco de .form-control de Bootstrap) */
 .textarea-edit {
-    width: 900px;
-    height: 300px;
-    border: 1px solid #000;
-    padding: 10px;
-    overflow: auto;
+    min-height: 350px;
+    max-height: 60vh;
+    overflow-y: auto;
+    line-height: 1.6;
+    word-wrap: break-word;
 }
 
 /* Subrayado de errores: se pinta sobre el texto sin modificar el DOM */
 ::highlight(lt-error) {
-    color: red;
-    text-decoration: underline wavy red;
+    color: #dc3545;
+    text-decoration: underline wavy #dc3545;
 }
 
 /* Menú flotante de sugerencias */
 #menu {
     display: none;
     position: absolute;
-    z-index: 1000;
-    min-width: 180px;
+    z-index: 1050;
+    min-width: 200px;
     max-width: 320px;
     background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
-    padding: 6px 0;
-    font-size: 14px;
+    border: 1px solid var(--bs-border-color, #dee2e6);
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+    padding: .375rem 0;
+    font-size: .9rem;
 }
 
 #menu .lt-mensaje {
-    padding: 4px 12px 6px;
-    color: #666;
-    font-size: 12px;
-    border-bottom: 1px solid #eee;
-    margin-bottom: 4px;
+    padding: .25rem .875rem .5rem;
+    color: var(--bs-secondary-color, #6c757d);
+    font-size: .8rem;
+    border-bottom: 1px solid var(--bs-border-color, #dee2e6);
+    margin-bottom: .25rem;
 }
 
 #menu .lt-sugerencia,
@@ -42,23 +43,29 @@
     text-align: left;
     background: none;
     border: 0;
-    padding: 6px 12px;
+    padding: .4rem .875rem;
     cursor: pointer;
+}
+
+#menu .lt-sugerencia {
+    font-weight: 500;
+    color: var(--bs-primary, #0d6efd);
 }
 
 #menu .lt-sugerencia:hover,
 #menu .lt-accion:hover {
-    background: #e9f2ff;
+    background: var(--bs-tertiary-bg, #f8f9fa);
 }
 
 #menu .lt-accion {
-    color: #444;
-    font-size: 13px;
+    color: var(--bs-body-color, #212529);
+    font-size: .85rem;
 }
 
 #menu .lt-vacio {
-    padding: 6px 12px;
-    color: #999;
-    border-bottom: 1px solid #eee;
-    margin-bottom: 4px;
+    padding: .4rem .875rem;
+    color: var(--bs-secondary-color, #6c757d);
+    font-style: italic;
+    border-bottom: 1px solid var(--bs-border-color, #dee2e6);
+    margin-bottom: .25rem;
 }
