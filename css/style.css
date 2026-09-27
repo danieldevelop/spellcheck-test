@@ -1,12 +1,64 @@
 .textarea-edit {
-    width: 800px;
-    height: 250px;
+    width: 900px;
+    height: 300px;
     border: 1px solid #000;
     padding: 10px;
+    overflow: auto;
 }
 
-.error-word {
+/* Subrayado de errores: se pinta sobre el texto sin modificar el DOM */
+::highlight(lt-error) {
     color: red;
-    text-decoration: underline;
+    text-decoration: underline wavy red;
+}
+
+/* Menú flotante de sugerencias */
+#menu {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    min-width: 180px;
+    max-width: 320px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+    padding: 6px 0;
+    font-size: 14px;
+}
+
+#menu .lt-mensaje {
+    padding: 4px 12px 6px;
+    color: #666;
+    font-size: 12px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 4px;
+}
+
+#menu .lt-sugerencia,
+#menu .lt-accion {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: 0;
+    padding: 6px 12px;
     cursor: pointer;
+}
+
+#menu .lt-sugerencia:hover,
+#menu .lt-accion:hover {
+    background: #e9f2ff;
+}
+
+#menu .lt-accion {
+    color: #444;
+    font-size: 13px;
+}
+
+#menu .lt-vacio {
+    padding: 6px 12px;
+    color: #999;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 4px;
 }
